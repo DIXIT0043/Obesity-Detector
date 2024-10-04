@@ -22,7 +22,7 @@ input_df = pd.DataFrame(input_data)
 encoder = LabelEncoder()
 input_df['Gender'] = encoder.fit_transform(input_df['Gender'])
 
-with open(r'C:\Users\kumar\OneDrive\Desktop\Machine Learning\Jupyter\DL_Classroom\Learning\Obesity_detector\obesity_model.h5', 'rb') as file:
+with open(r'obesity_model.h5', 'rb') as file:
     model = pickle.load(file)
 
 prediction = model.predict(input_df)
