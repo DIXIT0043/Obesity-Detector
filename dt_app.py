@@ -27,10 +27,3 @@ with open('obesity_model.h5', 'rb') as file:
 
 prediction = model.predict(input_df)
 st.write("Prediction:", prediction[0])
-import matplotlib.pylab as plt
-from sklearn import tree 
-import io
-buf = io.BytesIO()
-plt.savefig(buf, format='png')
-buf.seek(0)
-st.image(buf)
